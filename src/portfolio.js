@@ -3,6 +3,15 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
+import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+
+// Splash Screen
+
+const splashScreen = {
+  enabled: false, // set false to disable splash screen
+  animation: splashAnimation,
+  duration: 2000 // Set animation duration as per your animation
+};
 
 // Summary And Greeting Section
 
@@ -17,7 +26,7 @@ const greeting = {
     "Innovative Developer and Data Analyst skilled in managing projects, coding, testing, and data analytics. Proficient in creating technical specs, deploying scalable applications, and delivering solutions through stakeholder collaboration."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1XH_uqfP-dwGiIgYLkGT2TYIIYyKZr1Tf/view", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1f4WA-UWJCinDaTnYzSM8FGYp0xX8_wcb/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -344,11 +353,13 @@ const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
   display: false // Set true to display this section, defaults to false
 };
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
   greeting,
   socialMediaLinks,
+  splashScreen,
   skillsSection,
   educationInfo,
   techStack,
@@ -360,5 +371,7 @@ export {
   talkSection,
   podcastSection,
   contactInfo,
-  twitterDetails
+  twitterDetails,
+  isHireable,
+  resumeSection
 };
